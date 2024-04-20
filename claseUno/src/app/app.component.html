@@ -1,0 +1,32 @@
+<div class="container p-5">
+  <div class="col-md-6 offset-md-3 justify-content-center border border-dark p-2">
+      <div class="col-md-6 offset-md-3">
+          <div class="row">
+            <div class="col-md-6 offset-md-3">
+            <label><strong>ACTIVIDAD 1</strong></label>
+          </div>
+        </div>
+        <div class="row">
+          <label>Edad uno</label>
+            <input [(ngModel)]="edadUno" class="form-control" type="text">
+        </div>
+        <div class="row">
+          <label >Edad dos</label>
+            <input [(ngModel)]="edadDos" class="form-control" type="text">
+        </div>
+        <div class="row p-2">
+          <button type="button" (click)="calcular()" class="btn btn-primary">Calcular</button>
+        </div>
+        <div class="row p-2">
+          <button type="button" (click)="limpiar()"  class="btn btn-primary">Limpiar</button>
+        </div>
+        <div class="row p-2">
+          <label type="text">Suma: {{suma}}</label>
+        </div>
+        <div class="row p-2">
+          <label type="text">Promedio: {{promedio}}</label>
+        </div>
+      </div>
+  </div>
+</div>
+
