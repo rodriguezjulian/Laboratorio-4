@@ -1,30 +1,22 @@
 import { Routes } from '@angular/router';
-import { BienvenidaComponent } from './components/bienvenida/bienvenida.component';
-import { LoginComponent } from './components/login/login.component';
-import { ErrorComponent } from './components/error/error.component';
+
 export const routes: Routes = [
     {
-        path: "",
-        component : BienvenidaComponent 
+        path: 'bienvenida',
+        loadComponent: () => import ('./components/bienvenida/bienvenida.component'),     
     },
     {
-        path: "login",
-        component : LoginComponent
+        path: 'login',
+        loadComponent: () => import ('./components/login/login.component'), 
     },
     {
-        path:"error",
-        component: ErrorComponent
+        // para evitar el default
+        path:'error',
+        loadComponent: () => import ('./components/error/error.component')
+        .then((m)=> m.ErrorComponent), 
     },
     {
-        path : "bienvenido",
-        redirectTo : ""
-    },
-    {
-        path : "bienvenida",
-        redirectTo : ""
-    },
-    {
-        path : "**",
-        component: ErrorComponent
+        path : '**',
+        redirectTo: 'bienvenida'
     }
 ];

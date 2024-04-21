@@ -7,6 +7,6 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   templateUrl: './bienvenida.component.html',
   styleUrl: './bienvenida.component.css'
 })
-export class BienvenidaComponent {
+export default class BienvenidaComponent {
 
 }
