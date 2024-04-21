@@ -1,5 +1,12 @@
-<h1>Barra de navegacion</h1>
-<hr />
-<router-outlet></router-outlet>
-<hr />
-<h5>Footer</h5>
+<div container>
+    <h1>Ruteos</h1>
+    <hr />
+        <button routerLink="bienvenida" type="button" class="btn btn-dark m-2">BIENVENIDO</button>
+        <button routerLink="error" type="button" class="btn btn-dark m-2">ERROR</button>
+        <button routerLink="login" type="button" class="btn btn-dark m-2">LOGIN</button>
+        <router-outlet></router-outlet>
+    <hr />
+        <div class="col-md-8 text-center"> 
+            <p><strong>Julian Rodriguez - Lab 4 - A141</strong> </p>
+        </div>  
+</div>
