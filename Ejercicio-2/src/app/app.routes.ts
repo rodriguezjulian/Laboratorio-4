@@ -16,6 +16,10 @@ export const routes: Routes = [
         .then((m)=> m.ErrorComponent), 
     },
     {
+        path : "",
+        loadComponent: () => import ('./components/bienvenida/bienvenida.component'),  
+    },
+    {
         path : '**',
         redirectTo: 'bienvenida'
     }
